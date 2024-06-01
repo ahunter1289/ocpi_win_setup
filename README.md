@@ -18,9 +18,10 @@ The folder titled "setup_new_machine" contains a series of powershell scripts th
 3. Copy these files to clipboard
 4. Navigate to ocpi lab computer location C:/Users/ocpi/Documents/WindowsPowershell (create the WindowsPowershell folder if it doesnt already exist)
 5. Open a powershell terminal - do not do this with Admin priveleges
-6. Navigate to the above folder and run 0master.ps1
-7. Note there are several prompts that you will need to answer
-8. After the scripts finish, delete all the scripts you just copied EXCEPT "Microsoft.PowerShell_profile.ps1"
+6. Run this code powershell "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+7. Navigate to the above folder and run 0master.ps1
+8. Note there are several prompts that you will need to answer
+9. After the scripts finish, delete all the scripts you just copied EXCEPT "Microsoft.PowerShell_profile.ps1"
 
 ## Some lessons learned about these scripts
 - When set the paths Git/cmd and Git/bin, this should be set for the "User" and not "Machine"
