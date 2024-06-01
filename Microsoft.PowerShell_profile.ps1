@@ -1,5 +1,5 @@
 # Define the user profile directory
-$userProfile = "C:\Users\OCPI\"
+$userProfile = "C:\Users\<your user profile folder name here>\"
 
 # Version 3.9.13
 New-Alias py "$userProfile\AppData\Local\Programs\Python\Python39\python.exe"
