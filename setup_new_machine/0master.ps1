@@ -63,21 +63,21 @@ Write-Host "Script 7 completed."
 # Reset working directory to the original
 Set-Location $pwd
 
-# Run Script 8
-Write-Host "Running Script 8..."
-.\8create_python_venv.ps1
-Write-Host "Script 8 completed."
+# List of subsequent scripts to run
+$subsequentScripts = @(
+    ".\8create_python_venv.ps1",
+    ".\9create_vscode_ws.ps1"
+)
 
-# Reset working directory to the original
-Set-Location $pwd
+# Build argument list for new PowerShell process to run subsequent scripts
+$subsequentScriptArgs = $subsequentScripts -join '; '
 
-# Run Script 9
-Write-Host "Running Script 9..."
-.\9create_vscode_ws.ps1
-Write-Host "Script 9 completed."
+# Open a new PowerShell window and run the subsequent scripts
+$command = "powershell -NoExit -Command `"$subsequentScriptArgs`""
+Start-Process powershell -ArgumentList "-NoExit", "-Command", $subsequentScriptArgs
 
-# Reset working directory to the original
-Set-Location $pwd
+# Close the current PowerShell window
+Stop-Process -Id $PID
 
 # End of master script
 Write-Host "Master script completed."
