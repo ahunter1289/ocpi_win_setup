@@ -20,7 +20,7 @@ The folder titled "setup_new_machine" contains a series of powershell scripts th
 5. Open a powershell terminal - do not do this with Admin priveleges
 6. Run this code powershell "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
 7. Navigate to the above folder and run 0master.ps1
-8. Note there are several prompts that you will need to answer
+8. Note there are several prompts that you will need to answer, and make sure to allow permissions for any installation prompts
 9. After the scripts finish, delete all the scripts you just copied EXCEPT "Microsoft.PowerShell_profile.ps1"
 
 ## Some lessons learned about these scripts
