@@ -25,7 +25,7 @@ contourpy
 coverage==7.3.2
 cryptography==41.0.5
 cycler==0.12.1
--e C:\\Users\\OCPI\\Documents\\code\\data_analysis
+-e C:\\Users\\<your user profile folder name here>\\Documents\\code\\data_analysis
 datalog==0.7.8
 debugpy==1.8.0
 decorator==5.1.1
@@ -73,7 +73,7 @@ jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.9
 jupyterlab_server==2.25.0
 kiwisolver==1.4.5
--e C:\\Users\\OCPI\\Documents\\code\\laserlab
+-e C:\\Users\\<your user profile folder name here>\\Documents\\code\\laserlab
 lightlab==1.1.1
 lmfit
 MarkupSafe==2.1.3
