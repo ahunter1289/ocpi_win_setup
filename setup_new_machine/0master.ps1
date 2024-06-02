@@ -5,7 +5,7 @@ Write-Host "Master script started."
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Get the current working directory
-$pwd = Get-Location
+$pwd_var = Get-Location
 
 # Run Script 1
 Write-Host "Running Script 1..."
@@ -13,7 +13,7 @@ Write-Host "Running Script 1..."
 Write-Host "Script 1 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 2
 Write-Host "Running Script 2 w/ Admin Priveleges..."
@@ -21,7 +21,7 @@ Write-Host "Running Script 2 w/ Admin Priveleges..."
 Write-Host "Script 2 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 3
 Write-Host "Running Script 3..."
@@ -29,7 +29,7 @@ Write-Host "Running Script 3..."
 Write-Host "Script 3 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 4
 Write-Host "Running Script 4..."
@@ -37,7 +37,7 @@ Write-Host "Running Script 4..."
 Write-Host "Script 4 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 5
 Write-Host "Running Script 5..."
@@ -45,7 +45,7 @@ Write-Host "Running Script 5..."
 Write-Host "Script 5 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 5_1
 Write-Host "Running Script 5_1..."
@@ -53,7 +53,7 @@ Write-Host "Running Script 5_1..."
 Write-Host "Script 5_1 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 6
 Write-Host "Running Script 6..."
@@ -61,7 +61,7 @@ Write-Host "Running Script 6..."
 Write-Host "Script 6 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # Run Script 7
 Write-Host "Running Script 7..."
@@ -69,7 +69,7 @@ Write-Host "Running Script 7..."
 Write-Host "Script 7 completed."
 
 # Reset working directory to the original
-Set-Location $pwd
+Set-Location $pwd_var
 
 # List of subsequent scripts to run
 $subsequentScripts = @(
@@ -81,7 +81,6 @@ $subsequentScripts = @(
 $subsequentScriptArgs = $subsequentScripts -join '; '
 
 # Open a new PowerShell window and run the subsequent scripts
-$command = "powershell -NoExit -Command `"$subsequentScriptArgs`""
 Start-Process powershell -ArgumentList "-NoExit", "-Command", $subsequentScriptArgs
 
 # Close the current PowerShell window
