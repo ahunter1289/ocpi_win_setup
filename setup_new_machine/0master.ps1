@@ -47,6 +47,14 @@ Write-Host "Script 5 completed."
 # Reset working directory to the original
 Set-Location $pwd
 
+# Run Script 5_1
+Write-Host "Running Script 5_1..."
+.\5_1download_windows_terminal.ps1
+Write-Host "Script 5_1 completed."
+
+# Reset working directory to the original
+Set-Location $pwd
+
 # Run Script 6
 Write-Host "Running Script 6..."
 .\6create_code_folder_and_clone_repos.ps1
