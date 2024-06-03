@@ -6,7 +6,7 @@ $Subnet = "192.168.1."
 
 $Computers = (arp.exe -a | Select-String "$Subnet.*dynam") -replace ' +', ',' |
   ConvertFrom-Csv -Header Hostname, IPv4, MAC, x, Vendor |
-                   Select Hostname, IPv4, MAC
+                   Select-Object Hostname, IPv4, MAC
 
 ForEach ($Computer in $Computers) {
     nslookup $Computer.IPv4 | Select-String -Pattern "^Name:\s+([^\.]+).*$" |
